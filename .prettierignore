@@ -1,0 +1,26 @@
+# Output folders
+dist/
+.next/
+out/
+build/
+
+# Dependencies
+node_modules/
+
+# IDE config
+.idea/
+.vscode/
+
+# Logs and temporary files
+*.log
+*.tsbuildinfo
+
+# Test coverage
+coverage/
+
+# Env files
+.env
+.env.*.local
+
+# Git files
+turbo/
