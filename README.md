@@ -13,7 +13,8 @@ kholan/
 │   └── api/                  # Бекенд (NestJS)
 │
 ├── packages/                 # Спільні пакети
-│   └── shared/               # Типи, утиліти тощо
+│   └── shared/               # Компоненти інтерфейсу
+│   └── types/                # Спільні типи TypeScript
 │
 ├── .gitignore                # Правила ігнорування для Git
 ├── .prettierrc               # Конфіг Prettier
@@ -21,7 +22,8 @@ kholan/
 │
 ├── package.json              # Скрипти та загальні залежності
 ├── pnpm-lock.yaml
-├── tsconfig.json             # Project references для TypeScript
+└── pnpm-workspace.yaml       # Робоча область для монорепозиторію
+├── tsconfig.json             # Головний конфіг TypeScript з project references
 └── turbo.json                # Конфіг Turborepo
 </pre>
 

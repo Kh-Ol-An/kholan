@@ -12,5 +12,10 @@
 	},
 	"exclude": ["node_modules"],
 	"files": [],
-	"references": [{ "path": "packages/shared" }, { "path": "apps/web" }, { "path": "apps/api" }]
+	"references": [
+		{ "path": "packages/shared" },
+		{ "path": "packages/types" },
+		{ "path": "apps/web" },
+		{ "path": "apps/api" }
+	]
 }

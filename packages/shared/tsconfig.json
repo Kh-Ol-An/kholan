@@ -5,7 +5,8 @@
 		"declaration": true,
 		"declarationMap": true,
 		"emitDeclarationOnly": true,
+		"types": ["node"],
 		"outDir": "dist"
 	},
-	"include": ["**/*.ts"]
+	"include": ["src"]
 }

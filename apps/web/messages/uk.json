@@ -1,0 +1,11 @@
+{
+	"all_pages": {
+		"ol_kh": "Олег Христенко"
+	},
+	"welcome_page": {
+		"head": {
+			"title": "\uD83D\uDC68\u200D\uD83D\uDCBB Oleh Khrystenko – Fullstack-розробник, який втілює ідеї в реальність",
+			"description": "\uD83D\uDE80 Fullstack-розробник з 6+ років досвіду. Працюю з Next.js, NestJS, TypeScript і MongoDB. Допоможу втілити вашу бізнес-ідею в потужний та стильний проєкт."
+		}
+	}
+}
