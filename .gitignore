@@ -68,7 +68,7 @@ dist/
 *.tsbuildinfo
 
 # Env files
-.env*
+apps/web/.env
 !.env.example
 
 # macOS

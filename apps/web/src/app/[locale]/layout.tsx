@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import { Mulish } from 'next/font/google';
 import '../globals.css';
+import { TLang } from '@kholan/types';
 
 const mulish = Mulish({
 	subsets: ['cyrillic', 'latin'],
@@ -15,7 +16,7 @@ export default async function LocaleLayout({
 	params,
 }: {
 	children: ReactNode;
-	params: Promise<{ locale: string }>;
+	params: Promise<{ locale: TLang }>;
 }) {
 	const { locale } = await params;
 	if (!hasLocale(routing.locales, locale)) {
