@@ -3,7 +3,7 @@ import { ReactNode } from 'react';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import { Mulish } from 'next/font/google';
-import '../globals.css';
+import '@/app/globals.css';
 import { IPageParams } from '@/shared/types/settings';
 
 const mulish = Mulish({
