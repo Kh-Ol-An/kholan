@@ -1,7 +1,8 @@
 import { defineRouting } from 'next-intl/routing';
+import { CLang } from '@kholan/types';
 
 export const routing = defineRouting({
-	locales: ['en', 'uk'],
+	locales: Object.values(CLang),
 
-	defaultLocale: 'en',
+	defaultLocale: CLang.uk,
 });

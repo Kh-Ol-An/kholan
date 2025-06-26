@@ -1,6 +1,13 @@
 import { useTranslations } from 'next-intl';
+import { Metadata } from 'next';
 // import { Link } from '@/i18n/navigation';
 import ChangeLang from '@/features/change-lang';
+import { fetchMetadata } from '@/shared/seo/metadata';
+import { IMetaProps } from '@/shared/types/settings';
+
+export async function generateMetadata(props: IMetaProps): Promise<Metadata> {
+	return await fetchMetadata({ ...props, page: 'welcome', href: 'welcome' });
+}
 
 export default function HomePage() {
 	const allPagesT = useTranslations('all_pages');

@@ -4,20 +4,18 @@ import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import { Mulish } from 'next/font/google';
 import '../globals.css';
-import { TLang } from '@kholan/types';
+import { IPageParams } from '@/shared/types/settings';
 
 const mulish = Mulish({
 	subsets: ['cyrillic', 'latin'],
 	weight: ['300', '400', '700'],
 });
 
-export default async function LocaleLayout({
-	children,
-	params,
-}: {
+interface ILocaleLayoutProps extends IPageParams {
 	children: ReactNode;
-	params: Promise<{ locale: TLang }>;
-}) {
+}
+
+export default async function LocaleLayout({ children, params }: ILocaleLayoutProps) {
 	const { locale } = await params;
 	if (!hasLocale(routing.locales, locale)) {
 		notFound();
