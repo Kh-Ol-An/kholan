@@ -1,4 +1,4 @@
-# KhOlAn Monorepo
+# KhOlAn
 
 Цей репозиторій використовує **Turborepo** для організації монорепозиторію з фронтендом, бекендом і спільними пакетами.
 
@@ -13,7 +13,7 @@ kholan/
 │   └── api/                  # Бекенд (NestJS)
 │
 ├── packages/                 # Спільні пакети
-│   └── shared/               # Компоненти інтерфейсу
+│   ├── shared/               # Компоненти інтерфейсу
 │   └── types/                # Спільні типи TypeScript
 │
 ├── .gitignore                # Правила ігнорування для Git
@@ -22,7 +22,7 @@ kholan/
 │
 ├── package.json              # Скрипти та загальні залежності
 ├── pnpm-lock.yaml
-└── pnpm-workspace.yaml       # Робоча область для монорепозиторію
+├── pnpm-workspace.yaml       # Робоча область для монорепозиторію
 ├── tsconfig.json             # Головний конфіг TypeScript з project references
 └── turbo.json                # Конфіг Turborepo
 </pre>

@@ -1,36 +1,101 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌐 Фронтенд (Next.js)
 
-## Getting Started
+Це застосунок фронтенду, розроблений з використанням **Next.js 15** у режимі **Turbopack**.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 📁 Структура
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<pre>
+web/
+├── messages/                                      # JSON-файли з перекладами, які автоматично підтягуються next-intl
+│
+├── public/                                        # Публічні файли (зображення, шрифти, фавікони тощо)
+│
+├── src/                                           # Увесь вихідний код застосунку
+│   ├── app/                                       # Сторінки та маршрутизація (Next.js App Router)
+│   │   ├── [locale]/                              # Локалізовані маршрути (uk/en/...)
+│   │   └── globals.css                            # Глобальні стилі Tailwind CSS
+│   │
+│   ├── features/                                  # Функціональні модулі з логікою
+│   │   └── change-lang/                           # Модуль перемикання мови
+│   │       ├── ChangeLang.tsx                     # Компонент перемикання мови
+│   │       ├── index.ts                           # Публічний індекс для експорту
+│   │       └── types.ts                           # Локальні типи для модуля
+│   │
+│   ├── i18n/                                      # Конфігурації локалізації
+│   │   ├── navigation.ts                          # Мапа локалізованих назв для навігації
+│   │   ├── request.ts                             # Отримання поточної мови з запиту
+│   │   └── routing.ts                             # Налаштування мовних маршрутів
+│   │
+│   ├── shared/                                    # Спільні компоненти, утиліти та конфіги
+│   │   ├── config/                                # Глобальні конфігурації (наприклад, змінні середовища)
+│   │   │   └── env.ts                             # Доступ до змінних середовища
+│   │   │
+│   │   ├── helpers/                               # Допоміжні функції
+│   │   │   └── hocs/                              # HOC компоненти (вищого порядку)
+│   │   │       └── OutsideClickHandler/
+│   │   │           ├── index.ts                   # Індекс для експорту
+│   │   │           ├── OutsideClickHandler.tsx    # HOC для відслідковування кліків поза елементом
+│   │   │           └── types.ts                   # Типи для HOC
+│   │   │
+│   │   ├── icons/                                 # SVG-іконки у вигляді React-компонентів
+│   │   │   ├── ArrowChevronIcon.tsx               # Іконка стрілки
+│   │   │   └── index.ts                           # Експорти всіх іконок
+│   │   │
+│   │   ├── seo/                                   # SEO-метадані для сторінок
+│   │   │   └── metadata.ts                        # Заголовки, описи тощо
+│   │   │
+│   │   ├── types/                                 # Загальні типи
+│   │   │   └── settings.ts                        # Типи конфігурації/налаштувань
+│   │   │
+│   │   └── ui/                                    # Базові UI-компоненти
+│   │       └── UiSelect/                          # Компонент випадаючого списку
+│   │           ├── index.ts                       # Експорт компонента
+│   │           ├── types.ts                       # Типи для селекту
+│   │           └── UiSelect.tsx                   # Сам компонент
+│   │
+│   └── middleware.ts                              # Middleware для локалізованої маршрутизації (next-intl)
+│
+├── .env                                           # Змінні середовища
+├── eslint.config.mjs                              # Налаштування ESLint
+├── next.config.ts                                 # Конфігурація Next.js
+├── next-env.d.ts                                  # Автогенерований файл типів середовища
+├── package.json                                   # Залежності та скрипти для web
+├── postcss.config.mjs                             # Конфігурація PostCSS для Tailwind
+└── tsconfig.json                                  # Конфігурація TypeScript
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+</pre>
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## ⚙️ Скрипти
 
-To learn more about Next.js, take a look at the following resources:
+| Команда        | Опис                           |
+| -------------- | ------------------------------ |
+| `pnpm dev`     | Запуск dev-сервера             |
+| `pnpm build`   | Збірка фронтенду               |
+| `pnpm start`   | Запуск production-сервера      |
+| `pnpm lint`    | Перевірка ESLint               |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🧰 Технології
 
-## Deploy on Vercel
+- 🔷 **Next.js** 15.3.3 — SSR/SPA фреймворк
+- 🌐 **next-intl** — підтримка локалізації
+- 🎨 **Tailwind CSS** — утилітарна стилізація
+- ⚛️ **React 19**
+- ✨ **TypeScript**
+- 🧩 **PNPM Workspaces**
+- 🏁 **country-flag-icons**, **lodash.pick** та інші
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📁 Важливі папки
+
+- `app/` — сторінки та маршрутизація (Next.js App Router)
+- `features/` — модулі з окремою логікою або функціональністю
+- `shared/` — спільні UI-компоненти, іконки, утиліти та конфігурації
+- `i18n/` — логіка та конфігурація локалізації
+- `messages/` — JSON-файли перекладів, які використовуються через next-intl
