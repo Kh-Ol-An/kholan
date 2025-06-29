@@ -1,26 +1,49 @@
 @import 'tailwindcss';
 
+/* 🌞 Light theme — за замовчуванням */
 :root {
-	--background: #ffffff;
-	--foreground: #171717;
+	--onyx: #f9fafb;
+	--ash: #f3f4f6;
+	--graphite: #d1d5db;
+
+	--snow: #101820;
+
+	--ember: #e63921;
+	--flame: #ff5e45;
+	--peach: #fbb1a3;
+
+	--ocean: #377dff;
 }
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* 🌚 Темна тема через клас .dark */
+.dark,
+[data-theme='dark'] {
+	--onyx: #101820;
+	--ash: #1a2b34;
+	--graphite: #2b3a42;
+
+	--snow: #f8faf9;
+
+	--ember: #ff5e45;
+	--flame: #ff745b;
+	--peach: #f2977e;
+
+	--ocean: #5794ff;
+}
+
+/* 🎨 Прив’язка змінних до Tailwind токенів */
 @theme inline {
-	--color-background: var(--background);
-	--color-foreground: var(--foreground);
-	--font-sans: var(--font-geist-sans);
-	--font-mono: var(--font-geist-mono);
-}
+	--color-onyx: var(--onyx);
+	--color-ash: var(--ash);
+	--color-graphite: var(--graphite);
 
-@media (prefers-color-scheme: dark) {
-	:root {
-		--background: #0a0a0a;
-		--foreground: #ededed;
-	}
-}
+	--color-snow: var(--snow);
 
-body {
-	background: var(--background);
-	color: var(--foreground);
-	font-family: Arial, Helvetica, sans-serif;
+	--color-ember: var(--ember);
+	--color-flame: var(--flame);
+	--color-peach: var(--peach);
+
+	--color-ocean: var(--ocean);
 }

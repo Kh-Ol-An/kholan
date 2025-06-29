@@ -1,13 +1,13 @@
 {
-	"name": "shared",
+	"name": "@kholan/shared",
 	"version": "1.0.0",
-	"description": "",
-	"main": "index.js",
+	"main": "dist/index.js",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"build": "tsc -b"
 	},
-	"keywords": [],
-	"author": "",
-	"license": "ISC",
-	"packageManager": "pnpm@10.12.1"
+	"license": "MIT",
+	"packageManager": "pnpm@10.12.1",
+	"devDependencies": {
+		"@types/node": "^24.0.3"
+	}
 }

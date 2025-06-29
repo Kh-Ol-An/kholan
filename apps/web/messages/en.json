@@ -1,0 +1,11 @@
+{
+	"all_pages": {
+		"ol_kh": "Oleh Khrystenko"
+	},
+	"welcome_page": {
+		"head": {
+			"title": "👨‍💻 Oleh Khrystenko | Fullstack Developer",
+			"description": "\uD83D\uDE80 Fullstack developer with 6+ years of experience. Expert in Next.js, NestJS, TypeScript, and MongoDB. I help turn bold ideas into modern web applications."
+		}
+	}
+}
